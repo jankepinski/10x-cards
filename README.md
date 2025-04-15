@@ -1,94 +1,122 @@
-# 10x Astro Starter
+# 10x-Cards
 
-A modern, opinionated starter template for building fast, accessible, and AI-friendly web applications.
+AI-powered flashcard generation application to accelerate your learning.
+
+## Table of Contents
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Getting Started Locally](#getting-started-locally)
+- [Available Scripts](#available-scripts)
+- [Project Scope](#project-scope)
+- [Project Status](#project-status)
+- [License](#license)
+
+## Description
+
+10x-Cards is a web application that enables quick and efficient creation of educational flashcards. The system uses artificial intelligence to automatically generate flashcard candidates based on long input text, while also allowing manual flashcard creation. The application integrates with an open-source spaced repetition library to optimize the learning process.
+
+### Key Features
+- AI-powered flashcard generation from text input (1,000-10,000 characters)
+- Manual flashcard creation
+- Review workflow for flashcard candidates (save, reject, or edit)
+- User account management (registration, login, password change, account deletion)
+- Integration with spaced repetition algorithms
+- Comprehensive logging for diagnostics and analysis
 
 ## Tech Stack
 
-- [Astro](https://astro.build/) v5.5.5 - Modern web framework for building fast, content-focused websites
-- [React](https://react.dev/) v19.0.0 - UI library for building interactive components
-- [TypeScript](https://www.typescriptlang.org/) v5 - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) v4.0.17 - Utility-first CSS framework
+### Frontend
+- **Astro 5** - Fast, efficient pages with minimal JavaScript
+- **React 19** - Interactive components where needed
+- **TypeScript 5** - Static typing and better IDE support
+- **Tailwind 4** - Utility-first CSS framework
+- **Shadcn/ui** - Accessible React component library
 
-## Prerequisites
+### Backend
+- **Supabase** - Complete backend solution:
+  - PostgreSQL database
+  - Authentication system
+  - Backend-as-a-Service SDK
 
-- Node.js v22.14.0 (as specified in `.nvmrc`)
+### AI
+- **Openrouter.ai** - Communication with various AI models:
+  - Access to models from OpenAI, Anthropic, Google, and others
+  - Financial limit controls for API keys
+
+### CI/CD and Hosting
+- **GitHub Actions** - CI/CD pipelines
+- **DigitalOcean** - Application hosting via Docker
+
+## Getting Started Locally
+
+### Prerequisites
+- Node.js v22.14.0 (recommended to use [nvm](https://github.com/nvm-sh/nvm) with the included `.nvmrc`)
 - npm (comes with Node.js)
 
-## Getting Started
+### Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/10x-cards.git
+   cd 10x-cards
+   ```
 
-1. Clone the repository:
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-```bash
-git clone https://github.com/przeprogramowani/10x-astro-starter.git
-cd 10x-astro-starter
-```
+3. Create an environment variables file
+   ```bash
+   cp .env.example .env
+   ```
 
-2. Install dependencies:
+4. Configure your environment variables in the `.env` file
 
-```bash
-npm install
-```
+5. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-3. Run the development server:
-
-```bash
-npm run dev
-```
-
-4. Build for production:
-
-```bash
-npm run build
-```
+6. Open your browser and navigate to `http://localhost:4321`
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run preview` - Preview the production build locally
+- `npm run astro` - Run Astro CLI commands
 - `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
+- `npm run lint:fix` - Run ESLint and fix issues
+- `npm run format` - Run Prettier to format code
 
-## Project Structure
+## Project Scope
 
-```md
-.
-├── src/
-│   ├── layouts/    # Astro layouts
-│   ├── pages/      # Astro pages
-│   │   └── api/    # API endpoints
-│   ├── components/ # UI components (Astro & React)
-│   └── assets/     # Static assets
-├── public/         # Public assets
-```
+### Included in MVP
+- AI-powered flashcard generation from text input
+- Manual flashcard creation
+- Flashcard review workflow
+- User authentication and account management
+- Spaced repetition integration
+- Input validation
+- Security best practices (authentication, authorization, validation, row-level security)
 
-## AI Development Support
+### Not Included in MVP
+- Custom advanced spaced repetition algorithms (e.g., SuperMemo, Anki)
+- Multiple file format imports (PDF, DOCX, etc.)
+- Flashcard set sharing between users
+- Integration with external educational platforms
+- Mobile application (web-only in MVP)
 
-This project is configured with AI development tools to enhance the development experience, providing guidelines for:
+## Project Status
 
-- Project structure
-- Coding practices
-- Frontend development
-- Styling with Tailwind
-- Accessibility best practices
-- Astro and React guidelines
+This project is currently in early development. The MVP is under active construction.
 
-### Cursor IDE
-
-The project includes AI rules in `.cursor/rules/` directory that help Cursor IDE understand the project structure and provide better code suggestions.
-
-### GitHub Copilot
-
-AI instructions for GitHub Copilot are available in `.github/copilot-instructions.md`
-
-### Windsurf
-
-The `.windsurfrules` file contains AI configuration for Windsurf.
-
-## Contributing
-
-Please follow the AI guidelines and coding practices defined in the AI configuration files when contributing to this project.
+Success metrics for the project:
+- 75% of AI-generated flashcards must be accepted by users
+- At least 75% of users utilize the AI flashcard generation feature
+- Effective logging of flashcard generation processes and user decisions
+- Users experience significant improvement in flashcard creation efficiency compared to traditional manual processes
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). 
