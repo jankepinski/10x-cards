@@ -56,7 +56,7 @@ AI-powered flashcard generation application to accelerate your learning.
 ### Installation
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/10x-cards.git
+   git clone https://github.com/jankepinski/10x-cards.git
    cd 10x-cards
    ```
 
